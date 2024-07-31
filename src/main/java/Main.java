@@ -1,16 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        Person jane = new Person("Jane", 50);
-        System.out.println("----------");
-        Person john = new Person("John", 120);
+        StandardSensor ten = new StandardSensor(10);
+        StandardSensor minusFive = new StandardSensor(-5);
 
-        System.out.println("******************");
+        System.out.println(ten.read());
+        System.out.println(minusFive.read());
 
-        Calculator calc = new Calculator();
-        System.out.println(calc.factorial(5));
-        System.out.println("-----------");
-        System.out.println(calc.factorial(0));
-        System.out.println("------------");
-        System.out.println(calc.binomialCoefficient(-10,5));
+        System.out.println(ten.isOn());
+        ten.setOff();
+        System.out.println(ten.isOn());
     }
 }
